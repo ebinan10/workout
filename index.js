@@ -16,8 +16,7 @@ app.use(cors({origin:true,credentials:true,
     methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
 allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token']} ))
       
-console.log(process.env.Uri)
-mongoose.connect(process.env.Uri)
+mongoose.connect(process.env.Url)
 .then(()=>{
     app.listen(process.env.Port, console.log('connected to DB and localhost running on port 3000'))
    
