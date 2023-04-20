@@ -11,7 +11,7 @@ const cookieParser = require('cookie-parser')
 
   
 app.use(cookieParser());
-app.use(express.json()); 
+app.use(express.json());  
 app.use(cors({origin:true,credentials:true,
     methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
 allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token']} ))
