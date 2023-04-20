@@ -9,18 +9,18 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
  
 
- 
-app.use(cookieParser())
+  
+app.use(cookieParser());
 app.use(express.json());
 app.use(cors({origin:true,credentials:true,
     methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
 allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token']} ))
       
-mongoose.connect(process.env.Url)
+mongoose.connect(process.env.Uri)
 .then(()=>{
-    app.listen(process.env.Port, console.log('connected to DB and localhost running on port 3000'))
+    app.listen(process.env.Port, console.log(`connected to DB and localhost running on port ${process.env.Port}`))
    
-}).catch((error)=>{
+}).catch((error)=>{ 
         console.log(error) 
 })
     app.use('/', WorkOutRouter)
