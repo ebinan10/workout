@@ -2,9 +2,9 @@ const express = require('express');
 const app = express()
 const mongoose = require('mongoose')
 const env = require('dotenv').config()
-const WorkOutRouter = require('./router/Workout')
-const UserRouter = require('./router/User')
-const RefreshToken = require('./router/RefreshToken')
+const WorkOutRouter = require('./router/workout')
+const UserRouter = require('./router/user')
+const RefreshToken = require('./router/refreshtoken')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
  
