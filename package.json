@@ -5,8 +5,8 @@
   "proxy": "http//:localhost4000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "nodemon": "nodemon index.js"
+    "start": "node index.js",
+    "nodemon": "node index.js"
   },
   "keywords": [],
   "author": "",
